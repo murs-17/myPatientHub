@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from './components/ui/button'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Chat from "./pages/chat/Chat";
+import AppLayout from "./components/AppLayout";
+import "./App.css";
 
 function App() {
-
   return (
-    <>
-
-
-      <div className="ticks">
-        <Button className={'bg-white'}> Login</Button>
-        <button className=''>Login</button>
-      </div>
-      
-    </>
-  )
+    <BrowserRouter>
+      <AppLayout>
+        <Routes>
+          <Route path="/chat" element={<Chat />} />
+          <Route path="*" element={<Navigate to="/chat" replace />} />
+        </Routes>
+      </AppLayout>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
