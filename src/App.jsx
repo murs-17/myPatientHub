@@ -1,11 +1,18 @@
+import { useState } from 'react'
 import './App.css'
-import AppRouter from './routes/AppRouter'
+import { Button } from './components/ui/button'
 
 function App() {
 
   return (
     <>
-      <AppRouter />
+
+
+      <div className="ticks">
+        <Button className={'bg-white'}> Login</Button>
+        <button className=''>Login</button>
+      </div>
+      
     </>
   )
 }
