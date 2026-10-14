@@ -1,20 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from './components/ui/button'
+import React, { useState } from "react";
+import DashboardLayout from "./layouts/DashboardLayout";
 
-function App() {
+export default function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
 
   return (
-    <>
-
-
-      <div className="ticks">
-        <Button className={'bg-white'}> Login</Button>
-        <button className=''>Login</button>
+    <DashboardLayout
+      isSidebarOpen={isSidebarOpen}
+      onToggleSidebar={toggleSidebar}
+    >
+      <div className="w-full h-full min-h-[400px] border-2 border-dashed border-slate-200 rounded-xl flex items-center justify-center text-slate-400 text-sm font-medium bg-white/50">
+        [کدهای اصلی و نمودارهای شما اینجا قرار می‌گیرند]
       </div>
-      
-    </>
-  )
+    </DashboardLayout>
+  );
 }
-
-export default App
