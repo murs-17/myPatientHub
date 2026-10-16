@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -65,7 +66,7 @@ export default function DashboardLayout({ children }) {
         />
 
         <main className="flex-1  min-h-0 p-6 overflow-y-scroll">
-          {children}
+          <Outlet />
         </main>
 
         <Footer />

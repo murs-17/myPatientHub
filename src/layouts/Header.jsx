@@ -81,7 +81,6 @@ export default function Header({
             <span className="text-[11px] font-medium">Log out</span>
           </a>
 
-          {/* Log Out */}
           {/* Compact Sidebar Toggle */}
           {isCompact && (
             <button

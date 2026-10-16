@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/001.png";
 
 export default function Sidebar({ isOpen = true }) {
-  const [activeItem, setActiveItem] = useState("Dashboard");
-
   const menuItems = [
     {
       name: "Dashboard",
+      path: "/dashboard",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -24,6 +23,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Appointments",
+      path: "/appointments",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -41,6 +41,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Find Doctor",
+      path: "/find-doctor",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -58,6 +59,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Find Clinic",
+      path: "/find-clinic",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -75,6 +77,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Chat",
+      path: "/chat",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -92,6 +95,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Find MarketPlace",
+      path: "/find-market-place",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -109,6 +113,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Find Pharmacy",
+      path: "/find-pharmacy",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -131,6 +136,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "My Dependents",
+      path: "/my-dependents",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -148,6 +154,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "My Account",
+      path: "/my-account",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -169,6 +176,7 @@ export default function Sidebar({ isOpen = true }) {
 
     {
       name: "Settings",
+      path: "/settings",
       svg: (
         <svg
           className="w-5 h-5 transition-colors"
@@ -211,68 +219,46 @@ export default function Sidebar({ isOpen = true }) {
           </div>
         )}
       </div>
-
       {/* Divider */}
       <hr className="w-full border-0 border-t border-slate-300/60 mb-3 from-transparent  via-slate-200 to-transparent" />
-
       {/* Menu */}
       <nav className="px-4 space-y-1">
-        {menuItems.map((item) => {
-          const isActive = activeItem === item.name;
+        {menuItems.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className={({ isActive }) =>
+              `w-full flex items-center gap-3 px-3 py-2 rounded-xl
+        text-left text-[13px] font-medium transition-all duration-200
+        ${
+          isActive
+            ? "bg-white text-slate-700 shadow-sm"
+            : "text-slate-500 hover:bg-slate-50 hover:text-slate-700"
+        }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                <span
+                  className={`
+              w-9 h-9 rounded-xl flex items-center justify-center
+              shrink-0 transition-all duration-200
+              ${
+                isActive
+                  ? "bg-[#d946ef] text-white shadow-sm"
+                  : "bg-white text-slate-500 shadow-sm border border-slate-100"
+              }
+            `}
+                >
+                  {item.svg}
+                </span>
 
-          return (
-            <button
-              key={item.name}
-              onClick={() => setActiveItem(item.name)}
-              className={`
-                w-full
-                flex
-                items-center
-                gap-3
-                px-3
-                py-2
-                rounded-xl
-                text-left
-                text-[13px]
-                font-medium
-                transition-all
-                duration-200
-                ${
-                  isActive
-                    ? " bg-white text-slate-700 shadow-[0-2px-8px-rgba(0,0,0,0.06)]"
-                    : "text-slate-500 hover:bg-slate-50 hover:text-slate-700"
-                }
-              `}
-            >
-              {/* Icon */}
-              <span
-                className={`
-                  w-9
-                  h-9
-                  rounded-xl
-                  flex
-                  items-center
-                  justify-center
-                  shrink-0
-                  transition-all
-                  duration-200
-    ${
-      isActive
-        ? "bg-[#d946ef] text-white shadow-sm"
-        : "bg-white text-slate-500 shadow-sm border border-slate-100"
-    }
-  `}
-              >
-                {item.svg}
-              </span>
-
-              {/* Text */}
-              {isOpen && <span>{item.name}</span>}
-            </button>
-          );
-        })}
+                {isOpen && <span>{item.name}</span>}
+              </>
+            )}
+          </NavLink>
+        ))}
       </nav>
-
       {/* Download App Card */}
       <div className=" px-4 pb-4">
         <div className="w-full h-[145px] rounded-2xl bg-gradient-to-br from-[#f472b6] to-[#c084fc] p-4 text-white flex flex-col justify-between shadow-sm overflow-hidden">
