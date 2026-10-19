@@ -246,7 +246,7 @@ export default function Sidebar({ isOpen = true }) {
               ${
                 isActive
                   ? "bg-[#d946ef] text-white shadow-sm"
-                  : "bg-white text-slate-500 shadow-sm border border-slate-200"
+                  : "bg-white text-slate-500 shadow-sm border border-slate-100"
               }
             `}
                 >
