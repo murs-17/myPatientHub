@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const menuItems = [
   ["Dashboard", "/dashboard"],
@@ -14,6 +14,9 @@ const menuItems = [
 ];
 
 export default function AppLayout({ children }) {
+  const location = useLocation();
+  const isChat = location.pathname === "/chat";
+
   return (
     <div className="app-layout">
       <aside className="app-sidebar">
@@ -36,8 +39,22 @@ export default function AppLayout({ children }) {
 
       <div className="app-main">
         <header className="app-topbar">
-          <strong>Chat</strong>
-          <input placeholder="Search..." aria-label="Search" />
+          <strong>{isChat ? "Chat" : menuItems.find(
+            ([, path]) => path === location.pathname
+          )?.[0] || "MyPatientHUB"}</strong>
+
+          <div className="app-topbar-actions">
+            <input placeholder="Search..." aria-label="Search" />
+            <button type="button" onClick={() => window.location.href = "/login"}>
+              Log out
+            </button>
+            <NavLink to="/settings" aria-label="Settings" title="Settings">
+              ⚙️
+            </NavLink>
+            <button type="button" aria-label="Notifications" title="Notifications">
+              🔔
+            </button>
+          </div>
         </header>
 
         <main className="app-content">{children}</main>
