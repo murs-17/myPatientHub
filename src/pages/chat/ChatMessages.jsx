@@ -1,48 +1,31 @@
-import { useEffect, useRef } from "react";
-
-export default function ChatMessages({ messages, contact }) {
-  const messagesEndRef = useRef(null);
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }, [messages]);
-
+export default function ChatMessages({ messages }) {
   return (
-    <div className="chat-messages" aria-live="polite">
+    <div className="chat-messages">
       {messages.map((message) => (
         <article
-          key={message.id}
           className={`chat-message ${
             message.own ? "chat-message-own" : ""
           }`}
+          key={message.id}
         >
           {!message.own && (
-            <div className="chat-avatar chat-message-avatar">
-              {contact.avatar}
-            </div>
+            <img
+              className="chat-avatar chat-message-avatar"
+              src="https://i.pravatar.cc/100?img=12"
+              alt=""
+            />
           )}
 
           <div className="chat-message-content">
-            {!message.own && (
-              <strong className="chat-message-sender">
-                {message.sender}
-              </strong>
-            )}
-
-            <p className="chat-message-bubble">
-              {message.text}
-            </p>
+            <span className="chat-message-sender">
+              {message.sender}
+            </span>
+            <p className="chat-message-bubble">{message.text}</p>
           </div>
 
-          <time className="chat-message-time">
-            {message.time}
-          </time>
+          <time className="chat-message-time">{message.time}</time>
         </article>
       ))}
-
-      <div ref={messagesEndRef} />
     </div>
   );
 }

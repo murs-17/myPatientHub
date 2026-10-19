@@ -14,11 +14,15 @@ export default function ChatSidebar({
   return (
     <aside className="chat-sidebar">
       <div className="chat-my-profile">
-        <div className="chat-avatar chat-avatar-large">PM</div>
+        <img
+          className="chat-avatar chat-avatar-large"
+          src="https://i.pravatar.cc/100?img=13"
+          alt="Pro Murtaza"
+        />
 
         <div className="chat-profile-info">
           <strong>Pro Murtaza</strong>
-          <span className="chat-online">Your profile</span>
+          <span className="chat-online">online</span>
         </div>
 
         <button
@@ -26,9 +30,7 @@ export default function ChatSidebar({
           className="chat-icon-button"
           aria-label="Edit profile"
           title="Edit profile"
-          onClick={() =>
-            window.alert("Profile editing is not connected yet.")
-          }
+          onClick={() => window.alert("Profile editing is not connected yet.")}
         >
           ✎
         </button>
@@ -55,7 +57,11 @@ export default function ChatSidebar({
             }`}
             onClick={() => onSelect(contact.id)}
           >
-            <div className="chat-avatar">{contact.avatar}</div>
+            <img
+              className="chat-avatar"
+              src={contact.avatar}
+              alt=""
+            />
 
             <div className="chat-contact-details">
               <strong>{contact.name}</strong>

@@ -9,15 +9,15 @@ const initialContacts = [
   {
     id: 1,
     name: "noman khan",
-    avatar: "NK",
+    avatar: "https://i.pravatar.cc/100?img=12",
     online: true,
-    preview: "Hi hope you feel better",
+    preview: "short message here...",
     time: "2:30",
   },
   {
     id: 2,
     name: "ahmadi khan",
-    avatar: "AK",
+    avatar: "https://i.pravatar.cc/100?img=11",
     online: true,
     preview: "How are you feeling today?",
     time: "2:35",
@@ -25,7 +25,7 @@ const initialContacts = [
   {
     id: 3,
     name: "Sara Ahmed",
-    avatar: "SA",
+    avatar: "https://i.pravatar.cc/100?img=47",
     online: false,
     preview: "Thank you, doctor.",
     time: "Yesterday",
@@ -44,15 +44,15 @@ const initialMessages = {
     {
       id: 102,
       sender: "noman khan",
-      text: "Please let me know if you need anything.",
+      text: "Hi hope you feel better",
       time: "2:30",
       own: false,
     },
     {
       id: 103,
       sender: "noman khan",
-      text: "Wishing you a speedy recovery!",
-      time: "2:31",
+      text: "Hi hope you feel better",
+      time: "2:30",
       own: false,
     },
   ],
@@ -78,7 +78,7 @@ const initialMessages = {
 
 export default function Chat() {
   const [contacts, setContacts] = useState(initialContacts);
-  const [selectedId, setSelectedId] = useState(1);
+  const [selectedId, setSelectedId] = useState(2);
   const [messagesByContact, setMessagesByContact] =
     useState(initialMessages);
 
@@ -90,7 +90,6 @@ export default function Chat() {
 
   function handleSend(text) {
     const trimmedText = text.trim();
-
     if (!trimmedText) return;
 
     const now = new Date().toLocaleTimeString([], {
@@ -134,18 +133,21 @@ export default function Chat() {
 
         <main className="chat-conversation">
           <ChatHeader contact={selectedContact} />
-
           <ChatMessages
             messages={messages}
             contact={selectedContact}
           />
-
           <MessageInput onSend={handleSend} />
         </main>
       </div>
 
       <footer className="chat-footer">
-        © 2026, made with ♥ by MyPiHUB for a better web.
+        <span>© 2026, made with ♥ by MyPiHUB for a better web.</span>
+        <nav>
+          <a href="/chat">MyPatientHUB</a>
+          <a href="/about">About Us</a>
+          <a href="/blog">Blog</a>
+        </nav>
       </footer>
     </section>
   );
