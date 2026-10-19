@@ -8,7 +8,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/dashboard",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 45 40"
           fill="currentColor"
         >
@@ -26,7 +26,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/appointments",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -44,7 +44,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/find-doctor",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -62,7 +62,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/find-clinic",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 45 40"
           fill="currentColor"
         >
@@ -80,7 +80,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/chat",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -98,7 +98,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/find-market-place",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -116,7 +116,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/find-pharmacy",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -139,7 +139,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/my-dependents",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -157,7 +157,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/my-account",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
@@ -179,7 +179,7 @@ export default function Sidebar({ isOpen = true }) {
       path: "/settings",
       svg: (
         <svg
-          className="w-5 h-5 transition-colors"
+          className="w-4 h-4 transition-colors"
           viewBox="0 0 42 42"
           fill="currentColor"
         >
