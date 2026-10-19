@@ -65,7 +65,7 @@ export default function DashboardLayout({ children }) {
           isScrolled={isScrolled}
         />
 
-        <main className="flex-1  min-h-0 p-6 overflow-y-scroll">
+        <main className=" flex-1  min-h-0 p-6  bg-gray-100 overflow-y-scroll">
           <Outlet />
         </main>
 

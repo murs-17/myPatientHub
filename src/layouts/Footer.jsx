@@ -3,7 +3,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-100 border-t border-slate-200/60 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] font-medium text-slate-500 select-none">
+    <footer className="w-full bg-gray-100 border-t-0 border-slate-200/60 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] font-medium text-slate-500 select-none">
       {/* Left Section: Copyright */}
       <div className="flex flex-wrap items-center justify-center gap-1 order-2 sm:order-1 text-center">
         <span>© {new Date().getFullYear()}, made with</span>

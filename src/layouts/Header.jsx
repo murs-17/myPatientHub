@@ -17,7 +17,7 @@ export default function Header({
       className={`sticky top-0 z-50 w-full select-none transition-all duration-200 ${
         isScrolled
           ? "bg-white rounded-xl shadow-md border border-slate-200/60"
-          : "bg-gray-100 border-b border-slate-200/60"
+          : "bg-gray-100 border-b-0 border-slate-200/60"
       }`}
     >
       <div className="min-h-[64px] px-6 flex items-center justify-between gap-4">
