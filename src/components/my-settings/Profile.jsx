@@ -2,8 +2,8 @@ import profileImage from "../../assets/images/bruce-mars.45f6477957606abd2f24.jp
 import { useState } from "react";
 
 function Profile() {
-  // false 
-   const [isVisible, setIsVisible] = useState(false);
+  // false
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleVisibilityChange = () => {
     setIsVisible((previousState) => !previousState);
@@ -21,14 +21,13 @@ function Profile() {
           p-4 shadow-[0_1.25rem_1.6875rem_rgba(0,0,0,0.05)]
           sm:gap-6 sm:p-5 md:p-6"
       >
-    
         <div className="flex min-w-0 items-center gap-4 sm:gap-5">
           <img
-  src={profileImage}
-  alt="Profile"
-  className="h-[64px] w-[64px] shrink-0
+            src={profileImage}
+            alt="Profile"
+            className="h-[64px] w-[64px] shrink-0
     rounded-xl object-cover sm:h-[72px] sm:w-[72px]"
-/>
+          />
 
           <div className="flex min-w-0 flex-col gap-1">
             <h2
@@ -48,7 +47,6 @@ function Profile() {
           </div>
         </div>
 
-      
         <div
           className="flex shrink-0 items-center
             justify-end gap-3"
@@ -59,9 +57,7 @@ function Profile() {
               font-medium leading-4 text-[#7b809a]
               sm:inline"
           >
-            {isVisible
-              ? "Switch to invisible"
-              : "Switch to visible"}
+            {isVisible ? "Switch to invisible" : "Switch to visible"}
           </span>
 
           <button
@@ -81,19 +77,13 @@ function Profile() {
               focus-visible:outline-2
               focus-visible:outline-offset-2
               focus-visible:outline-[#344767]
-              ${
-                isVisible
-                  ? "bg-[#344767]"
-                  : "bg-[#d9dce3]"
-              }`}
+              ${isVisible ? "bg-[#344767]" : "bg-[#d9dce3]"}`}
           >
             <span
               className={`block h-4 w-4 rounded-full
                 bg-white shadow-sm transition-transform
                 duration-200 ${
-                  isVisible
-                    ? "translate-x-[18px]"
-                    : "translate-x-0"
+                  isVisible ? "translate-x-[18px]" : "translate-x-0"
                 }`}
             />
           </button>

@@ -10,9 +10,9 @@ function BankCard() {
         brightness-90"
         style={{
           backgroundImage: `linear-gradient(310deg, rgba(20,23,39,0.8), rgba(58,65,111,0.8)), url(${cardBg})`,
-            backgroundSize: "190%",
-            backgroundPosition: " center 10% 200% 35%",
-            backgroundRepeat: "no-repeat",
+          backgroundSize: "190%",
+          backgroundPosition: " center 10% 200% 35%",
+          backgroundRepeat: "no-repeat",
         }}
       />
 
@@ -40,9 +40,7 @@ function BankCard() {
             </div>
 
             <div className="shrink-0">
-              <p className="whitespace-nowrap text-sm text-white/70">
-                Expires
-              </p>
+              <p className="whitespace-nowrap text-sm text-white/70">Expires</p>
               <p className="mt-1 whitespace-nowrap text-lg font-medium">
                 11/22
               </p>

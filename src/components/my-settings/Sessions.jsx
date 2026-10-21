@@ -61,8 +61,8 @@ function Sessions() {
             className="mb-0 mt-3 font-roboto text-sm
               leading-6 text-[#7b809a] sm:text-base"
           >
-            This is a list of devices that have logged into
-            your account. Remove those that you do not recognize.
+            This is a list of devices that have logged into your account. Remove
+            those that you do not recognize.
           </p>
         </div>
 

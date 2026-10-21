@@ -2,8 +2,7 @@ import { useRef } from "react";
 import { useState } from "react";
 const cardTitle =
   "text-base font-medium leading-[1.625] tracking-[0.0075em] text-[#344767]";
-const itemTitle =
-  "text-sm font-medium leading-[1.5] text-[#344767]";
+const itemTitle = "text-sm font-medium leading-[1.5] text-[#344767]";
 
 const RED = "#F44335";
 const PISTACHIO = "#8BC34A";
@@ -14,17 +13,47 @@ const groups = [
   {
     label: "Newest",
     items: [
-      { name: "Food", date: "27 March 2020, at 12:30 PM", amount: "- $ 2,500", type: "out" },
-      { name: "Medicine", date: "27 March 2020, at 04:30 AM", amount: "+ $ 2,000", type: "in" },
+      {
+        name: "Food",
+        date: "27 March 2020, at 12:30 PM",
+        amount: "- $ 2,500",
+        type: "out",
+      },
+      {
+        name: "Medicine",
+        date: "27 March 2020, at 04:30 AM",
+        amount: "+ $ 2,000",
+        type: "in",
+      },
     ],
   },
   {
     label: "Yesterday",
     items: [
-      { name: "Appointment", date: "26 March 2020, at 13:45 PM", amount: "+ $ 750", type: "in" },
-      { name: "MarketPlace", date: "26 March 2020, at 12:30 PM", amount: "+ $ 1,000", type: "in" },
-      { name: "Pharmacy", date: "26 March 2020, at 08:30 AM", amount: "+ $ 2,500", type: "in" },
-      { name: "Bookings", date: "26 March 2020, at 05:00 AM", amount: "Pending", type: "pending" },
+      {
+        name: "Appointment",
+        date: "26 March 2020, at 13:45 PM",
+        amount: "+ $ 750",
+        type: "in",
+      },
+      {
+        name: "MarketPlace",
+        date: "26 March 2020, at 12:30 PM",
+        amount: "+ $ 1,000",
+        type: "in",
+      },
+      {
+        name: "Pharmacy",
+        date: "26 March 2020, at 08:30 AM",
+        amount: "+ $ 2,500",
+        type: "in",
+      },
+      {
+        name: "Bookings",
+        date: "26 March 2020, at 05:00 AM",
+        amount: "Pending",
+        type: "pending",
+      },
     ],
   },
 ];
@@ -70,7 +99,9 @@ function CircleIcon({ type }) {
         border: `1px solid ${color}`,
         color,
         opacity: hover ? 0.65 : 1,
-        boxShadow: ring ? `0 0 0 ${RING_SIZE}px ${hexToRgba(color, RING_ALPHA)}` : "none",
+        boxShadow: ring
+          ? `0 0 0 ${RING_SIZE}px ${hexToRgba(color, RING_ALPHA)}`
+          : "none",
       }}
     >
       <span

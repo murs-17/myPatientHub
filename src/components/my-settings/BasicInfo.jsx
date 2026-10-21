@@ -1,9 +1,18 @@
 import { useEffect, useId, useRef, useState } from "react";
 
 const months = [
-  "January", "February", "March", "April",
-  "May", "June", "July", "August",
-  "September", "October", "November", "December",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 const days = Array.from({ length: 31 }, (_, i) => String(i + 1));
@@ -120,12 +129,12 @@ function SelectField({
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => {
-  if (name === "blood-group") {
-    return;
-  }
+          if (name === "blood-group") {
+            return;
+          }
 
-  setOpen((previous) => !previous);
-}}
+          setOpen((previous) => !previous);
+        }}
         className={`${inputClass} flex items-center justify-between gap-2 text-left ${
           open ? "border-[#8ce4ed] ring-2 ring-[#b5f0f4]/70" : ""
         }`}
@@ -138,11 +147,11 @@ function SelectField({
           {value || placeholder}
         </span>
 
-       {name !== "blood-group" && (
-  <span className="text-[#718096]">
-    <ChevronIcon open={open} />
-  </span>
-)}
+        {name !== "blood-group" && (
+          <span className="text-[#718096]">
+            <ChevronIcon open={open} />
+          </span>
+        )}
       </button>
 
       {open && (
@@ -190,9 +199,7 @@ function SelectField({
 
                   <span
                     className={`whitespace-nowrap text-[9px] text-[#a0a7b4] transition-opacity ${
-                      hoveredOption === option
-                        ? "opacity-100"
-                        : "opacity-0"
+                      hoveredOption === option ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     Press to select

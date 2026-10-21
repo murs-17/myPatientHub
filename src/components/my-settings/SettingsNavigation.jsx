@@ -53,11 +53,7 @@ function SettingsNavigation() {
                 focus-visible:outline-offset-2
                 focus-visible:outline-blue-600"
             >
-              <Icon
-                size={18}
-                color="#344767"
-                className="shrink-0"
-              />
+              <Icon size={18} color="#344767" className="shrink-0" />
 
               <span>{label}</span>
             </button>

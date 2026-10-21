@@ -1,8 +1,4 @@
-function CreditCardIcon({
-  size = 18,
-  color = "#344767",
-  className = "",
-}) {
+function CreditCardIcon({ size = 18, color = "#344767", className = "" }) {
   return (
     <svg
       width={size}

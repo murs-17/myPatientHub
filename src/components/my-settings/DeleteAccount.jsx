@@ -66,21 +66,13 @@ export default function DeleteAccount() {
               transition-colors duration-200
               focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-[#344767]/30
-              ${
-                confirmDelete
-                  ? "bg-[#344767]"
-                  : "bg-[#cbd3df]"
-              }`}
+              ${confirmDelete ? "bg-[#344767]" : "bg-[#cbd3df]"}`}
           >
             <span
               className={`inline-block h-4 w-4 rounded-full
                 bg-white shadow-sm
                 transition-transform duration-200
-                ${
-                  confirmDelete
-                    ? "translate-x-4"
-                    : "translate-x-0.5"
-                }`}
+                ${confirmDelete ? "translate-x-4" : "translate-x-0.5"}`}
             />
           </button>
 
@@ -138,11 +130,7 @@ export default function DeleteAccount() {
               hover:scale-[1.015]
               active:scale-[0.99]
               focus:outline-none
-              ${
-                deleteFlash
-                  ? "delete-account-flash"
-                  : ""
-              }`}
+              ${deleteFlash ? "delete-account-flash" : ""}`}
           >
             Delete Account
           </button>
@@ -159,7 +147,6 @@ export default function DeleteAccount() {
         >
           Account deletion requested. Connect this action to your
           account-deletion API before using it in production.
-
           <button
             type="button"
             onClick={() => setShowConfirm(false)}

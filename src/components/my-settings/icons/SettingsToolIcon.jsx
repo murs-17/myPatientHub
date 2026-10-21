@@ -1,8 +1,4 @@
-function SettingsToolIcon({
-  size = 18,
-  color = "#344767",
-  className = "",
-}) {
+function SettingsToolIcon({ size = 18, color = "#344767", className = "" }) {
   return (
     <svg
       width={size}

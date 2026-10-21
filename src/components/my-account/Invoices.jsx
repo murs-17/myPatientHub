@@ -73,15 +73,11 @@ function Invoices() {
                 {item.date}
               </p>
 
-              <p className="text-xs text-[#7b809a]">
-                {item.id}
-              </p>
+              <p className="text-xs text-[#7b809a]">{item.id}</p>
             </div>
 
             <div className="flex shrink-0 items-center gap-3">
-              <span className="text-sm text-[#7b809a]">
-                {item.amount}
-              </span>
+              <span className="text-sm text-[#7b809a]">{item.amount}</span>
 
               <span className="flex items-center gap-1 text-xs font-bold text-[#344767]">
                 <span className="material-icons-round text-[18px] leading-none">

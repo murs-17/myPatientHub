@@ -49,9 +49,7 @@ function ChangePassword() {
     setMessage("");
   };
 
-  const hasSpecialCharacter = /[^A-Za-z0-9]/.test(
-    form.newPassword
-  );
+  const hasSpecialCharacter = /[^A-Za-z0-9]/.test(form.newPassword);
 
   const hasMinimumLength = form.newPassword.length >= 6;
   const hasNumber = /\d/.test(form.newPassword);
@@ -59,25 +57,15 @@ function ChangePassword() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (
-      !form.currentPassword ||
-      !form.newPassword ||
-      !form.confirmPassword
-    ) {
+    if (!form.currentPassword || !form.newPassword || !form.confirmPassword) {
       setMessageType("error");
       setMessage("Please fill in all password fields.");
       return;
     }
 
-    if (
-      !hasMinimumLength ||
-      !hasSpecialCharacter ||
-      !hasNumber
-    ) {
+    if (!hasMinimumLength || !hasSpecialCharacter || !hasNumber) {
       setMessageType("error");
-      setMessage(
-        "Your new password must meet all the requirements below."
-      );
+      setMessage("Your new password must meet all the requirements below.");
       return;
     }
 
@@ -89,15 +77,13 @@ function ChangePassword() {
 
     if (form.currentPassword === form.newPassword) {
       setMessageType("error");
-      setMessage(
-        "Your new password must differ from your current password."
-      );
+      setMessage("Your new password must differ from your current password.");
       return;
     }
 
     setMessageType("success");
     setMessage(
-      "Validation successful. Connect your password-update API to save the changes."
+      "Validation successful. Connect your password-update API to save the changes.",
     );
   };
 
@@ -120,10 +106,7 @@ function ChangePassword() {
       >
         {fields.map((field) => (
           <div key={field.id} className="w-full min-w-0">
-            <label
-              htmlFor={field.id}
-              className={labelClass}
-            >
+            <label htmlFor={field.id} className={labelClass}>
               {field.label}
             </label>
 
@@ -134,9 +117,7 @@ function ChangePassword() {
               autoComplete={field.autoComplete}
               value={form[field.name]}
               placeholder={field.placeholder}
-              onChange={(event) =>
-                updateField(field.name, event.target.value)
-              }
+              onChange={(event) => updateField(field.name, event.target.value)}
               className={inputClass}
             />
           </div>
@@ -154,21 +135,35 @@ function ChangePassword() {
           <ul className="m-0 list-none space-y-1 pl-0 font-roboto text-[12px] leading-[18px] text-[#7b809a] sm:text-[13px]">
             <li className="flex items-start gap-2">
               <span className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#526078]" />
-              <span className={form.newPassword && hasSpecialCharacter ? "text-emerald-600" : ""}>
+              <span
+                className={
+                  form.newPassword && hasSpecialCharacter
+                    ? "text-emerald-600"
+                    : ""
+                }
+              >
                 One special character
               </span>
             </li>
 
             <li className="flex items-start gap-2">
               <span className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#526078]" />
-              <span className={form.newPassword && hasMinimumLength ? "text-emerald-600" : ""}>
+              <span
+                className={
+                  form.newPassword && hasMinimumLength ? "text-emerald-600" : ""
+                }
+              >
                 Min 6 characters
               </span>
             </li>
 
             <li className="flex items-start gap-2">
               <span className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full bg-[#526078]" />
-              <span className={form.newPassword && hasNumber ? "text-emerald-600" : ""}>
+              <span
+                className={
+                  form.newPassword && hasNumber ? "text-emerald-600" : ""
+                }
+              >
                 One number (2 are recommended)
               </span>
             </li>
@@ -185,9 +180,7 @@ function ChangePassword() {
             role="status"
             aria-live="polite"
             className={`text-sm leading-5 ${
-              messageType === "success"
-                ? "text-emerald-600"
-                : "text-red-500"
+              messageType === "success" ? "text-emerald-600" : "text-red-500"
             }`}
           >
             {message}

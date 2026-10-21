@@ -1,8 +1,4 @@
-function ShopIcon({
-  size = 18,
-  color = "#344767",
-  className = "",
-}) {
+function ShopIcon({ size = 18, color = "#344767", className = "" }) {
   return (
     <svg
       width={size}

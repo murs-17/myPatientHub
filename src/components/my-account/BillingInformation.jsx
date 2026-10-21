@@ -43,15 +43,33 @@ const deleteSx = {
 const editSx = { ...baseBtn, color: "#344767" };
 
 const icon = (name) => (
-  <span className="material-icons-round" style={{ fontSize: 16, lineHeight: 1 }}>
+  <span
+    className="material-icons-round"
+    style={{ fontSize: 16, lineHeight: 1 }}
+  >
     {name}
   </span>
 );
 
 const billings = [
-  { name: "Oliver Liam", company: "Viking Burrito", email: "oliver@burrito.com", vat: "FRB1235476" },
-  { name: "Lucas Harper", company: "Stone Tech Zone", email: "lucas@stone-tech.com", vat: "FRB1235476" },
-  { name: "Ethan James", company: "Fiber Notion", email: "ethan@fiber.com", vat: "FRB1235476" },
+  {
+    name: "Oliver Liam",
+    company: "Viking Burrito",
+    email: "oliver@burrito.com",
+    vat: "FRB1235476",
+  },
+  {
+    name: "Lucas Harper",
+    company: "Stone Tech Zone",
+    email: "lucas@stone-tech.com",
+    vat: "FRB1235476",
+  },
+  {
+    name: "Ethan James",
+    company: "Fiber Notion",
+    email: "ethan@fiber.com",
+    vat: "FRB1235476",
+  },
 ];
 
 function Field({ label, value }) {

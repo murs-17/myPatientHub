@@ -1,8 +1,4 @@
-function Box3DIcon({
-  size = 18,
-  color = "#344767",
-  className = "",
-}) {
+function Box3DIcon({ size = 18, color = "#344767", className = "" }) {
   return (
     <svg
       width={size}
