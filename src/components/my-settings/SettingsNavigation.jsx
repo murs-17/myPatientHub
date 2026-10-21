@@ -3,7 +3,7 @@ import DocumentIcon from "./icons/DocumentIcon";
 import Box3DIcon from "./icons/Box3DIcon";
 import ShopIcon from "./icons/ShopIcon";
 import SettingsToolIcon from "./icons/SettingsToolIcon";
-import CreditCardIcon from "./icons/CreditCardIcon";
+import CreditCardIcon from "./icons/CreditcardIcon.jsx";
 
 const settingsItems = [
   { label: "Profile", id: "profile", Icon: SpaceshipIcon },

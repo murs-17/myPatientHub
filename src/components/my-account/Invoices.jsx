@@ -19,34 +19,41 @@ const invoices = [
 
 function Invoices() {
   return (
-    <div className="h-full rounded-2xl bg-white p-6 shadow-sm">
-      <div className="flex items-center justify-between">
-        <h3 className="text-base font-semibold text-[#344767]">Invoices</h3>
+    <div className="flex h-full min-h-0 flex-col rounded-2xl bg-white p-5 shadow-sm">
+      {/* Header */}
+      <div className="flex shrink-0 items-center justify-between gap-2">
+        <h3 className="text-base font-semibold leading-6 text-[#344767]">
+          Invoices
+        </h3>
 
         <Button
           variant="outlined"
           size="small"
           disableRipple
           sx={{
-            fontSize: 11,
+            fontSize: 12,
             fontWeight: 700,
             borderRadius: "8px",
-            px: 1.5,
-            py: 0.5,
+            px: 4.5,
+            py: 1,
             minWidth: 0,
             lineHeight: 1.6,
-            color: "#1ab7ff",
-            borderColor: "#1ab7ff",
+            color: "#1AB7FF",
+            borderColor: "#1AB7FF",
             backgroundColor: "transparent",
-            transition: "background-color 250ms ease",
+            boxShadow: "none",
+            transition: "all 250ms ease",
 
             "&.MuiButton-outlined:hover, &.MuiButton-outlined:focus": {
-              color: "#1ab7ff",
-              borderColor: "#1ab7ff",
-              backgroundColor: "rgba(26,183,255,0.08)",
+              color: "#1AB7FF",
+              borderColor: "rgba(26, 183, 255, 0.55)",
+              backgroundColor: "transparent",
+              transform: "translateY(-2px)",
+              boxShadow: "none",
             },
+
             "&.MuiButton-outlined:hover": {
-              animation: `${jiggle} 300ms ease`,
+              animation: "none",
             },
           }}
         >
@@ -54,16 +61,27 @@ function Invoices() {
         </Button>
       </div>
 
-      <ul className="mt-5 flex flex-col gap-4">
-        {invoices.map((item, i) => (
-          <li key={i} className="flex items-center justify-between gap-3">
+      {/* Invoice list */}
+      <ul className="mt-5 flex min-h-0 flex-1 flex-col justify-between gap-3">
+        {invoices.map((item) => (
+          <li
+            key={item.id + item.date}
+            className="flex items-center justify-between gap-2"
+          >
             <div className="min-w-0">
-              <p className="truncate text-sm font-medium text-[#344767]">{item.date}</p>
-              <p className="text-xs text-[#7b809a]">{item.id}</p>
+              <p className="truncate text-sm font-medium text-[#344767]">
+                {item.date}
+              </p>
+
+              <p className="text-xs text-[#7b809a]">
+                {item.id}
+              </p>
             </div>
 
-            <div className="flex shrink-0 items-center gap-4">
-              <span className="text-sm text-[#7b809a]">{item.amount}</span>
+            <div className="flex shrink-0 items-center gap-3">
+              <span className="text-sm text-[#7b809a]">
+                {item.amount}
+              </span>
 
               <span className="flex items-center gap-1 text-xs font-bold text-[#344767]">
                 <span className="material-icons-round text-[18px] leading-none">

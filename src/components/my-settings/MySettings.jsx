@@ -1,5 +1,4 @@
-import SettingsNavigation from "./SettingsNavigation";
-import Profile from "./Profile";
+import SettingsNavigation from "../../components/my-settings/settingsNavigation.jsx";import Profile from "./Profile";
 import BasicInfo from "./BasicInfo";
 import ChangePassword from "./ChangePassword";
 import TwoFactorAuth from "./TwoFactorAuth";

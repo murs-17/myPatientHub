@@ -1,11 +1,10 @@
-import BankCard from "./BankCard";
-import AccountBalance from "./AccountBalance";
-import WalletCard from "./WalletCard";
-import PaymentMethod from "./PaymentMethod";
-import Invoices from "./Invoices";
-import BillingInformation from "./BillingInformation";
-import Transactions from "./Transactions";
-
+import BankCard from "../../components/my-account/BankCard.jsx";
+import AccountBalance from "../../components/my-account/AccountBalance.jsx";
+import WalletCard from "../../components/my-account/Walletcard.jsx";
+import PaymentMethod from "../../components/my-account/PaymentMethod.jsx";
+import Invoices from "../../components/my-account/Invoices.jsx";
+import BillingInformation from "../../components/my-account/BillingInformation.jsx";
+import Transactions from "../../components/my-account/Transactions.jsx";
 function MyAccount() {
   return (
     <main className="w-full bg-[#f7f8fa] px-[28px] py-[20px] sm:px-6 lg:px-8">
