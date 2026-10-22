@@ -1,7 +1,7 @@
-export default function FindPharmacy() {
+export default function MyDependents() {
   return (
     <div>
-      <h1>my dependents</h1>
+      <h1>My Dependents</h1>
     </div>
   );
 }
