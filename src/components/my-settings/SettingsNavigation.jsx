@@ -33,7 +33,7 @@ function SettingsNavigation() {
   return (
     <nav
       aria-label="Account settings"
-      className="sticky top-4 w-full min-w-0 self-start
+      className="w-full min-w-0 self-start
         overflow-hidden rounded-xl bg-white
         shadow-[0_1.25rem_1.6875rem_rgba(0,0,0,0.05)]"
     >

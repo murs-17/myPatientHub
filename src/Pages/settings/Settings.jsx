@@ -11,8 +11,8 @@ function MySettings() {
     <main className="w-full min-w-0 px-3 py-5 sm:px-5 lg:px-8">
       <div className="mx-auto grid w-full min-w-0 max-w-[1600px] grid-cols-1 items-start gap-5 lg:grid-cols-[235px_minmax(0,1fr)] xl:grid-cols-[260px_minmax(0,1fr)] xl:gap-7">
         {/* Left navigation */}
-        <aside className="w-full min-w-0 self-start">
-          <SettingsNavigation />
+        <aside className="w-full min-w-0 self-start lg:sticky lg:top-5 lg:h-fit">
+        <SettingsNavigation />
         </aside>
 
         {/* Right content */}
