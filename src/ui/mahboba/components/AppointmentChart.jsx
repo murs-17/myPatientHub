@@ -48,7 +48,7 @@ const AppointmentChart = () => {
 
     colors: ["#008FFB", "#00E396", "#FEB019", "#FF4560"],
 
-    // plot settings //
+    // inside settings chart //
     plotOptions: {
       bar: {
         horizontal: false,
