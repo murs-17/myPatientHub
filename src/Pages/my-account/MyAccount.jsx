@@ -1,10 +1,10 @@
-﻿import BankCard from "../../components/my-account/Bankcard.jsx";
-import AccountBalance from "../../components/my-account/AccountBalance.jsx";
-import WalletCard from "../../components/my-account/Walletcard.jsx";
-import PaymentMethod from "../../components/my-account/PaymentMethod.jsx";
-import Invoices from "../../components/my-account/Invoices.jsx";
-import BillingInformation from "../../components/my-account/Billinginformation.jsx";
-import Transactions from "../../components/my-account/Transactions.jsx";
+﻿import BankCard from "../../ui/samana/components/my-account/BankCard.jsx";
+import AccountBalance from "../../ui/samana/components/my-account/AccountBalance.jsx";
+import WalletCard from "../../ui/samana/components/my-account/Walletcard.jsx";
+import PaymentMethod from "../../ui/samana/components/my-account/PaymentMethod.jsx";
+import Invoices from "../../ui/samana/components/my-account/Invoices.jsx";
+import BillingInformation from "../../ui/samana/components/my-account/BillingInformation.jsx";
+import Transactions from "../../ui/samana/components/my-account/Transactions.jsx";
 
 function MyAccount() {
   return (

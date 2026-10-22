@@ -1,4 +1,4 @@
-import profileImage from "../../assets/images/bruce-mars.45f6477957606abd2f24.jpg";
+import profileImage from "../../../../assets/images/bruce-mars.45f6477957606abd2f24.jpg";
 import { useState } from "react";
 
 function Profile() {
@@ -94,3 +94,5 @@ function Profile() {
 }
 
 export default Profile;
+
+

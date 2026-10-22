@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import { keyframes } from "@mui/system";
-import mastercard from "../../assets/images/mastercard.27fca3e7637a9458fb64.png";
-import visa from "../../assets/images/visa.71c0d5e9e2aaee42e4c3.png";
+import mastercard from "../../../../assets/images/mastercard.27fca3e7637a9458fb64.png";
+import visa from "../../../../assets/images/visa.71c0d5e9e2aaee42e4c3.png";
 
 const jiggle = keyframes`
   0%   { transform: translateY(0); }
@@ -121,3 +121,5 @@ function PaymentMethod() {
 }
 
 export default PaymentMethod;
+
+

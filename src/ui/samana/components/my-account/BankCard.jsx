@@ -1,6 +1,5 @@
-import mastercard from "../../assets/images/mastercard.27fca3e7637a9458fb64.png";
-import cardBg from "../../assets/images/curved14.12c9ea54425c4f1bc1d7.jpg";
-
+import mastercard from "../../../../assets/images/mastercard.27fca3e7637a9458fb64.png";
+import cardBg from "../../../../assets/images/curved14.12c9ea54425c4f1bc1d7.jpg";
 function BankCard() {
   return (
     <div className="relative aspect-[1.6/1] w-full max-w-[480px] overflow-hidden rounded-[18px] bg-[#1a2145] p-7 font-['Roboto',sans-serif] text-white shadow-[0_1.4375rem_2.8125rem_-0.6875rem_rgba(20,20,20,0.25)]">

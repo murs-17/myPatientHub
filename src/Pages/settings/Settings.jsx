@@ -1,10 +1,10 @@
-import SettingsNavigation from "../../components/my-settings/SettingsNavigation.jsx";
-import Profile from "../../components/my-settings/Profile.jsx";
-import BasicInfo from "../../components/my-settings/BasicInfo.jsx";
-import ChangePassword from "../../components/my-settings/ChangePassword.jsx";
-import TwoFactorAuth from "../../components/my-settings/TwoFactorAuth.jsx";
-import Sessions from "../../components/my-settings/Sessions.jsx";
-import DeleteAccount from "../../components/my-settings/DeleteAccount.jsx";
+import Sessions from "../../ui/samana/components/my-settings/Sessions.jsx";
+import DeleteAccount from "../../ui/samana/components/my-settings/DeleteAccount.jsx";
+import SettingsNavigation from "../../ui/samana/components/my-settings/SettingsNavigation.jsx";
+import Profile from "../../ui/samana/components/my-settings/Profile.jsx";
+import BasicInfo from "../../ui/samana/components/my-settings/BasicInfo.jsx";
+import ChangePassword from "../../ui/samana/components/my-settings/ChangePassword.jsx";
+import TwoFactorAuth from "../../ui/samana/components/my-settings/TwoFactorAuth.jsx";
 
 function MySettings() {
   return (
