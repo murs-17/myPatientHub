@@ -1,4 +1,3 @@
-import React from "react";
 import doctorImage1 from "../../../assets/dashboard/doctor.jpg";
 import doctorImage2 from "../../../assets/dashboard/doctor2.jpg";
 import doctorImage3 from "../../../assets/dashboard/doctor3.jpg";
@@ -42,26 +41,23 @@ const doctors = [
 export default function DoctorsTable() {
   return (
     <div className="w-full overflow-hidden rounded-xl bg-white p-5 shadow-sm">
-      {/* عنوان جدول */}
       <h2 className="mb-5 text-lg font-semibold text-slate-700">Doctors</h2>
 
-      {/* جدول */}
+      {/* table*/}
       <div className="w-full overflow-x-auto">
         <table className="w-full min-w-[650px] border-collapse text-sm">
-          {/* اطلاعات داکترها */}
           <tbody>
             {doctors.map((doctor) => (
               <tr
                 key={doctor.id}
-                className="border-b border-slate-100 last:border-b-0 transition hover:bg-slate-50"
+                className="border-b border-slate-100 last:border-b-0 transition "
               >
-                {/* نام و عکس */}
                 <td className="px-4 py-4">
                   <div className="flex items-center gap-3">
                     <img
                       src={doctor.image}
                       alt={doctor.name}
-                      className="h-11 w-11 shrink-0 rounded-full object-cover"
+                      className="h-11 w-11 shrink-0 "
                     />
 
                     <div>
@@ -74,7 +70,6 @@ export default function DoctorsTable() {
                   </div>
                 </td>
 
-                {/* تخصص */}
                 <td className="px-4 py-4 text-center">
                   <div>
                     <p className="mb-1 text-xs text-slate-400">Speciality:</p>
@@ -85,7 +80,6 @@ export default function DoctorsTable() {
                   </div>
                 </td>
 
-                {/* هزینه مشاوره */}
                 <td className="px-4 py-4 text-center">
                   <div>
                     <p className="mb-1 text-xs text-slate-400">
@@ -98,7 +92,6 @@ export default function DoctorsTable() {
                   </div>
                 </td>
 
-                {/* تخفیف */}
                 <td className="px-4 py-4 text-center">
                   <div>
                     <p className="mb-1 text-xs text-slate-400">Discount:</p>

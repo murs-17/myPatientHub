@@ -45,8 +45,6 @@ export default function Symptoms() {
         pointHoverBorderColor: "#ffffff",
         pointHoverBorderWidth: 2,
         tension: 0.4,
-        fill: true,
-        backgroundColor: "rgba(107,114,128,0.08)",
       },
     ],
   };

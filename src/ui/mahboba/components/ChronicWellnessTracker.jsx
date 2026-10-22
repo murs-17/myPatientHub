@@ -1,6 +1,7 @@
 import Chart from "react-apexcharts";
 
 export default function ChronicWellnessTracker() {
+  // chart data //
   const series = [
     {
       name: "Malaria",
@@ -20,6 +21,7 @@ export default function ChronicWellnessTracker() {
     },
   ];
 
+  // chart setting //
   const options = {
     chart: {
       type: "radar",
@@ -83,6 +85,8 @@ export default function ChronicWellnessTracker() {
       opacity: 0.1,
     },
 
+    // hover part //
+
     markers: {
       size: 0,
       hover: {
@@ -123,6 +127,7 @@ export default function ChronicWellnessTracker() {
       },
     },
 
+    // inside settings chart //
     plotOptions: {
       radar: {
         polygons: {

@@ -5,7 +5,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// Clinic logos
+// Clinic logos //
 import logo1 from "../../../assets/dashboard/01.png";
 import logo2 from "../../../assets/dashboard/02.svg";
 import logo3 from "../../../assets/dashboard/03.svg";
@@ -49,7 +49,7 @@ const clinics = [
 export default function PromotionByPharmacies() {
   const [showInfo, setShowInfo] = useState(false);
 
-  // Data for the donut chart
+  // Data for the donut chart //
   const chartData = {
     labels: clinics.map((clinic) => clinic.name),
 
@@ -66,12 +66,12 @@ export default function PromotionByPharmacies() {
     ],
   };
 
-  // Chart settings
+  // Chart settings //
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: true,
 
-    cutout: "62%",
+    cutout: "70%",
 
     plugins: {
       legend: {
@@ -103,7 +103,6 @@ export default function PromotionByPharmacies() {
 
   return (
     <section className="w-full  rounded-2xl bg-white p-5 shadow-sm sm:p-6">
-      {/* Card Header */}
       <div className="mb-6 flex items-center justify-between gap-3">
         <h2 className="text-lg font-semibold text-slate-700 sm:text-xl">
           Promotion by Pharmacies
@@ -120,16 +119,13 @@ export default function PromotionByPharmacies() {
         </button>
       </div>
 
-      {/* Information Message */}
       {showInfo && (
         <div className="mb-5 rounded-lg bg-blue-50 p-3 text-sm text-slate-600">
           This chart displays the promotion percentages for different clinics.
         </div>
       )}
 
-      {/* Main Content */}
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:items-center">
-        {/* Donut Chart */}
         <div className="flex flex-col items-center lg:col-span-2">
           <div className="w-full max-w-[260px]">
             <Doughnut data={chartData} options={chartOptions} />
@@ -144,7 +140,6 @@ export default function PromotionByPharmacies() {
           </button>
         </div>
 
-        {/* Clinics List */}
         <div className="lg:col-span-3">
           {clinics.map((clinic, index) => (
             <div
@@ -153,7 +148,6 @@ export default function PromotionByPharmacies() {
                 index !== clinics.length - 1 ? "border-b border-slate-100" : ""
               }`}
             >
-              {/* Clinic Logo and Name */}
               <div className="flex min-w-0 items-center gap-3">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center">
                   <img
@@ -168,7 +162,6 @@ export default function PromotionByPharmacies() {
                 </span>
               </div>
 
-              {/* Percentage */}
               <span className="shrink-0 text-sm font-medium text-slate-500">
                 {clinic.percentage}%
               </span>

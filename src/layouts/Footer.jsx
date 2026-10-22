@@ -1,4 +1,3 @@
-import React from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export default function Footer() {
@@ -8,7 +7,6 @@ export default function Footer() {
       <div className="flex flex-wrap items-center justify-center gap-1 order-2 sm:order-1 text-center">
         <span>© {new Date().getFullYear()}, made with</span>
 
-        {/* Filled Heart Icon */}
         <FavoriteIcon
           sx={{
             fontSize: 14,

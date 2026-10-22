@@ -201,7 +201,7 @@ export default function Sidebar({ isOpen = true }) {
     <aside
       className={`${
         isOpen ? "w-[250px] min-w-[250px]" : "w-[80px] min-w-[80px]"
-      } h-screen overflow-y-auto overflow-x-hidden bg-gray-100 border-r border-slate-200/60 flex flex-col select-none transition-all duration-300`}
+      } h-screen  overflow-y-auto overflow-x-hidden bg-gray-100 border-r border-slate-200/60 flex flex-col select-none transition-all duration-300`}
     >
       {/* Logo */}
       <div className="flex items-center px-6 pt-5 pb-4">

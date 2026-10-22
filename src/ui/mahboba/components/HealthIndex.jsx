@@ -7,7 +7,6 @@ import {
   PointElement,
   LineElement,
   Tooltip,
-  layouts,
 } from "chart.js";
 
 ChartJS.register(
@@ -46,8 +45,6 @@ export default function HealthIndex() {
         pointHoverBorderColor: "#ffffff",
         pointHoverBorderWidth: 2,
         tension: 0.4,
-        fill: true,
-        backgroundColor: "rgba(107,114,128,0.08)",
       },
     ],
   };
@@ -104,7 +101,7 @@ export default function HealthIndex() {
         <p className="text-sm font-medium text-slate-500">Health Index</p>
 
         <div className="flex items-center gap-2">
-          <h2 className="text-xl font-bold font-bold text-slate-700">70%</h2>
+          <h2 className="text-xl font-bold text-slate-700">70%</h2>
 
           <span className="text-xs font-bold  text-emerald-500">+3%</span>
         </div>

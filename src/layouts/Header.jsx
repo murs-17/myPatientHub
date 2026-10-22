@@ -1,4 +1,3 @@
-import React from "react";
 import { Search, Menu } from "lucide-react";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
@@ -23,9 +22,7 @@ export default function Header({
       <div className="min-h-[64px] px-6 flex items-center justify-between gap-4">
         {/* Left Section: Breadcrumbs and Page Title */}
         <div className="flex items-center gap-6 min-w-0">
-          {/* Page Information */}
           <div className="flex flex-col min-w-0">
-            {/* Breadcrumbs */}
             <div className="flex items-center gap-2 text-slate-500 text-xs mb-1">
               <HomeRoundedIcon sx={{ fontSize: 14, color: "#7b809a" }} />
 
@@ -34,13 +31,11 @@ export default function Header({
               <span className="text-slate-600">Dashboard</span>
             </div>
 
-            {/* Page Title */}
             <h1 className="text-sm font-semibold text-slate-800 capitalize">
               Dashboard
             </h1>
           </div>
 
-          {/* Menu Button */}
           <button
             type="button"
             aria-label="Toggle sidebar"
@@ -59,7 +54,6 @@ export default function Header({
 
         {/* Right Section: Search and Actions */}
         <div className="flex items-center gap-3">
-          {/* Search Box */}
           <div className="hidden sm:flex items-center w-36 md:w-40 h-8 px-2.5 border border-slate-300 rounded-md bg-white">
             <Search className="w-3.5 h-3.5 text-slate-600 shrink-0" />
 
@@ -71,7 +65,6 @@ export default function Header({
             />
           </div>
 
-          {/* Log Out */}
           <a
             href="/authentication/sign-in/basic"
             className="flex items-center gap-1.5 text-slate-700 hover:text-slate-900 whitespace-nowrap"

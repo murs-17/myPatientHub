@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isCompact, setIsCompact] = useState(window.innerWidth < 1200);
   const [isScrolled, setIsScrolled] = useState(false);

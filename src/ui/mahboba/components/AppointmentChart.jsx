@@ -1,7 +1,7 @@
-import React from "react";
 import Chart from "react-apexcharts";
 
 const AppointmentChart = () => {
+  // chart data //
   const series = [
     {
       name: "Emergency",
@@ -21,6 +21,7 @@ const AppointmentChart = () => {
     },
   ];
 
+  // chart setting //
   const options = {
     chart: {
       type: "bar",
@@ -47,6 +48,7 @@ const AppointmentChart = () => {
 
     colors: ["#008FFB", "#00E396", "#FEB019", "#FF4560"],
 
+    // plot settings //
     plotOptions: {
       bar: {
         horizontal: false,
@@ -113,6 +115,7 @@ const AppointmentChart = () => {
       strokeDashArray: 0,
     },
 
+    // hover part //
     legend: {
       show: true,
       position: "bottom",

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import doctorImage from "../../../assets/dashboard/doctor.jpg";
 
 const appointments = [
@@ -77,6 +77,7 @@ export default function UpComingAppoinments() {
     }
 
     event.preventDefault();
+
     const nextTab = tabs[nextIndex];
     setSelectedTab(nextTab);
     setOpenMenu(null);

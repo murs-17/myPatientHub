@@ -5,14 +5,14 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// Clinic logos
+// Clinic logos //
 import logo1 from "../../../assets/dashboard/01.png";
 import logo2 from "../../../assets/dashboard/02.svg";
 import logo3 from "../../../assets/dashboard/03.svg";
 import logo4 from "../../../assets/dashboard/04.svg";
 import logo5 from "../../../assets/dashboard/05.svg";
 
-// Clinic information
+// Clinic information //
 const clinics = [
   {
     name: "Klinik Lee Healthcare",
@@ -49,7 +49,7 @@ const clinics = [
 export default function PromotionByClinics() {
   const [showInfo, setShowInfo] = useState(false);
 
-  // Data for the donut chart
+  // Data for the donut chart //
   const chartData = {
     labels: clinics.map((clinic) => clinic.name),
 
@@ -66,12 +66,12 @@ export default function PromotionByClinics() {
     ],
   };
 
-  // Chart settings
+  // Chart settings //
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: true,
 
-    cutout: "62%",
+    cutout: "70%",
 
     plugins: {
       legend: {
@@ -103,7 +103,6 @@ export default function PromotionByClinics() {
 
   return (
     <section className="w-full rounded-2xl bg-white p-5 shadow-sm sm:p-6">
-      {/* Card Header */}
       <div className="mb-6 flex items-center justify-between gap-3">
         <h2 className="text-lg font-semibold text-slate-700 sm:text-xl">
           Promotion by Clinics
@@ -120,7 +119,6 @@ export default function PromotionByClinics() {
         </button>
       </div>
 
-      {/* Information Message */}
       {showInfo && (
         <div className="mb-5 rounded-lg bg-blue-50 p-3 text-sm text-slate-600">
           This chart displays the promotion percentages for different clinics.

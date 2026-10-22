@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import doctorImage from "../../../assets/dashboard/doctor.jpg";
 
 const appointments = [
@@ -46,7 +46,6 @@ export default function PreviousAppointments() {
                 : ""
             }`}
           >
-            {/* عکس و مشخصات داکتر */}
             <div className="flex min-w-0 items-center gap-3">
               <img
                 src={appointment.image}
@@ -65,7 +64,6 @@ export default function PreviousAppointments() {
               </div>
             </div>
 
-            {/* تاریخ و منوی سه نقطه */}
             <div className="relative flex shrink-0 items-center gap-2">
               <p className="text-right text-xs text-slate-500 sm:text-sm">
                 {appointment.date}
@@ -96,7 +94,6 @@ export default function PreviousAppointments() {
                 </svg>
               </button>
 
-              {/* منوی بازشونده */}
               {openMenu === appointment.id && (
                 <div className="absolute right-0 top-full z-50 mt-1 w-48 rounded-md border border-slate-100 bg-white py-2 shadow-lg">
                   <button
