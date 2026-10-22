@@ -219,6 +219,7 @@ export default function Sidebar({ isOpen = true }) {
           </div>
         )}
       </div>
+
       {/* Divider */}
       <hr className="w-full border-0 border-t border-slate-300/60 mb-3 from-transparent  via-slate-200 to-transparent" />
       {/* Menu */}

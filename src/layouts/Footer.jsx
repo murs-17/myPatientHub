@@ -11,6 +11,7 @@ export default function Footer() {
           sx={{
             fontSize: 14,
             color: "#7b809a",
+
             verticalAlign: "middle",
           }}
         />
