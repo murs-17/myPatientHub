@@ -1,0 +1,21 @@
+# Page recreation
+- [x] Apply final exact black/white tooltip surfaces and magenta bar-tooltip indicator without changing hover behavior.
+- [x] Verify the final consolidated dashboard version and explain Git sync handoff.
+- [ ] Confirm GitHub delivery — blocked on the user's Git connection/status in Lovable Project settings → Git; the agent cannot inspect sync status or push directly.
+- [x] Convert all application components, hooks, utilities, tests, and configuration to JavaScript without changing behavior.
+- [x] Verify JavaScript routing, both chart tooltips, saved bookings, cancellation, CSV export, marketplace controls, and layouts.
+- [x] Deliver the complete JavaScript source ZIP with images and current setup instructions.
+- [x] Bar chart tooltip shows only the hovered category: month name plus that type and its count, per segment.
+- [x] Update both summary charts with monthly visitors and verify hover details.
+- [x] Style the summary chart hover box as a solid dark panel: white month name, cyan square beside the white "Visitors:" label and number.
+- [x] Split the bar chart tooltip into a light gray month header and a white body with a colored circle, category label, and bold value.
+- [x] Collapse the sidebar to a 76px icon-only mini view that expands the main content, with an arrow-style icon while minimized.
+- [x] Fix the header as a floating glass bar: 8px top gap, translucent blurred background, rounded corners, above page content.
+- [x] Apply the header and mini-sidebar from the shared shell so both Appointments and Find Marketplace behave identically.
+- [x] Consolidate every change into one master build, verify all five features live on both pages, and deliver the complete standalone JavaScript source ZIP.
+- [x] Match shared MyPatientHUB shell and supplied appointment screenshots.
+- [x] Build Appointments with calendar, charts, lists, and session-only booking.
+- [x] Build Marketplace with offers, searchable/sortable table, and offer dialogs, matching the supplied screenshots.
+- [x] Verify both pages and controls on desktop and mobile.
+- [x] Deliver all source code with setup details as a ZIP.
+- [x] Confirmed only two separate pages: Appointments and Find Marketplace.

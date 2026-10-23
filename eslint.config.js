@@ -1,21 +1,46 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
 
-export default defineConfig([
-  globalIgnores(['dist']),
+export default [
   {
-    files: ['**/*.{js,jsx}'],
-    extends: [
-      js.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
+    ignores: [
+      "node_modules/**",
+      "dist/**",
+      ".output/**",
+      ".vinxi/**",
+      ".lovable/**",
+      ".workspace/**",
+      "src/routeTree.gen.js",
     ],
+  },
+  {
+    files: ["**/*.{js,jsx}"],
     languageOptions: {
-      globals: globals.browser,
+      ecmaVersion: "latest",
+      sourceType: "module",
       parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node },
+    },
+    plugins: { "react-hooks": reactHooks, "react-refresh": reactRefresh },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      "no-unused-vars": "off",
+      "no-empty": ["error", { allowEmptyCatch: true }],
+      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "no-restricted-imports": [
+        "error",
+        {
+          paths: [
+            {
+              name: "server-only",
+              message: "Use @tanstack/react-start/server-only for server boundaries.",
+            },
+          ],
+        },
+      ],
     },
   },
-])
+];
