@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import DashboardLayout from "./layouts/DashboardLayout";
 
-import Dashboard from "./Pages/dashboard/Dashboard";
+import Dashboard from "./Pages/dashboard/dashboard.jsx";
 import Appointments from "./Pages/appointments/Appointments";
 import Chat from "./Pages/chat/Chat";
 import FindClinic from "./Pages/find-clinic/FindClinic";
