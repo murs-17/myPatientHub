@@ -1,0 +1,93 @@
+
+/* Two-column layout */
+.clinic-details-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* Left column provides the full scrolling boundary */
+.clinic-profile-column {
+  min-width: 0;
+  align-self: stretch;
+}
+
+/* Profile card remains in place while the right side scrolls past it */
+.clinic-profile-card {
+  position: sticky;
+  top: 24px;
+  padding: 20px 14px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Right-side content */
+.clinic-main-content {
+  min-width: 0;
+  padding-bottom: 24px;
+}
+
+/* On smaller screens, stack the columns */
+@media (max-width: 767px) {
+  .clinic-details-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .clinic-profile-card {
+    position: static;
+  }
+}
+
+
+.clinic-details-page {
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.clinic-details-page h1,
+.clinic-details-page h2,
+.clinic-details-page p {
+  text-align: left;
+}
+
+.clinic-details-page h1 {
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.375 !important;
+  font-weight: 550 !important;
+  letter-spacing: normal !important;
+  color: #344767 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+
+.clinic-details-page section h2 {
+  color: #1e293b !important;
+}
+
+
+.clinic-details-page .doctor-name {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  margin: 8px 0 0 !important;
+  align-self: stretch;
+  color: #67748E !important;
+}
+
+
+/* Medical and Surgical Specialities */
+.clinic-details-page section h2 {
+  color: #1f2937 !important;
+}
+
+.clinic-details-page section .text-sm.leading-7 {
+  font-size: 14px !important;
+  line-height: 28px !important;
+  color: #4b5563 !important;
+}

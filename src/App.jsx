@@ -1,20 +1,25 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from './components/ui/button'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./App.css";
+
+import FindClinic from "./pages/FindClinic/FindClinic.jsx";
+import ClinicDetails from "./pages/ClinicDetails/ClinicDetails.jsx";
+import MainLayout from "./layouts/MainLayout.jsx";
 
 function App() {
-
   return (
-    <>
-
-
-      <div className="ticks">
-        <Button className={'bg-white'}> Login</Button>
-        <button className=''>Login</button>
-      </div>
-      
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route
+            path="/"
+            element={<Navigate to="/find-clinic" replace />}
+          />
+          <Route path="/find-clinic" element={<FindClinic />} />
+          <Route path="/clinic-details" element={<ClinicDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
