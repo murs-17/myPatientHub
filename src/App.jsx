@@ -6,7 +6,7 @@ import Dashboard from "./Pages/dashboard/Dashboard";
 import Appointments from "./Pages/appointments/Appointments";
 import Chat from "./Pages/chat/Chat";
 import FindClinic from "./Pages/find-clinic/FindClinic";
-import FindDoctor from "./Pages/find-doctor/FindDoctor";
+import SearchDoctor from "./Pages/find-doctor/SearchDoctor";
 import FindMarketPlace from "./Pages/find-market-place/FindMarketPlace";
 import FindPharmacy from "./Pages/find-pharmacy/FindPharmacy";
 import MyAccount from "./Pages/my-account/MyAccount";
@@ -26,7 +26,7 @@ export default function App() {
 
           <Route path="/chat" element={<Chat />} />
 
-          <Route path="/find-doctor" element={<FindDoctor />} />
+          <Route path="/find-doctor" element={<SearchDoctor />} />
 
           <Route path="/find-clinic" element={<FindClinic />} />
 

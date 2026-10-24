@@ -64,13 +64,16 @@ export default function DashboardLayout({ children }) {
           isCompact={isCompact}
           isScrolled={isScrolled}
         />
+          <main className="flex-1 min-h-0 p-6 overflow-y-scroll flex flex-col">
+      <div className="flex-1">
+        <Outlet />
+      </div>
 
-        <main className="flex-1  min-h-0 p-6 overflow-y-scroll">
-          <Outlet />
-        </main>
-
+      <div className="mt-6 [&>footer]:bg-transparent [&>footer]:px-0">
         <Footer />
       </div>
-    </div>
+    </main>
+  </div>
+</div>
   );
 }
