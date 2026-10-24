@@ -219,8 +219,8 @@ export default function Sidebar({ isOpen = true }) {
           </div>
         )}
       </div>
-      {/* Divider */}
-      <hr className="w-full border-0 border-t border-slate-300/60 mb-3 from-transparent  via-slate-200 to-transparent" />
+    {/* Divider */}
+    <hr className="shrink-0 border-0 h-px my-4 opacity-25 bg-[linear-gradient(to_right,rgba(52,71,103,0),rgba(52,71,103,0.5),rgba(52,71,103,0))]" />
       {/* Menu */}
       <nav className="px-4 space-y-1">
         {menuItems.map((item) => (

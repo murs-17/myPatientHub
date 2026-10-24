@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+.fd-root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+  background-color: rgb(248, 249, 250);
+  color: rgb(52, 71, 103);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.625;
+  letter-spacing: 0.00938em;
+  text-align: left;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fd-root *,
+.fd-root *::before,
+.fd-root *::after {
+  box-sizing: border-box;
+}
+
+.fd-root p,
+.fd-root h2,
+.fd-root h3,
+.fd-root h6,
+.fd-root form,
+.fd-root hr {
+  margin: 0;
+}
+
+.fd-grid-services {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.fd-grid-specialties {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 24px;
+  row-gap: 20px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .fd-grid-services,
+  .fd-grid-specialties {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.fd-card-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.fd-service-btn {
+  min-height: 92px;
+  padding: 16px;
+}
+
+.fd-specialty-btn {
+  min-height: 48px;
+  padding: 0 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.5px;
+  letter-spacing: 0.1876px;
+}
+
+.fd-service-body {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.fd-service-img-wrap {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.fd-service-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.fd-service-text {
+  min-width: 0;
+}
+
+.fd-chevron {
+  flex-shrink: 0;
+}
+
+.fd-hero-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.fd-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 16px 16px;
+  color: #67748e;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.fd-footer p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fd-footer nav {
+  display: flex;
+  gap: 24px;
+}
+
+.fd-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fd-tabs {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  margin-bottom: 24px;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: rgb(248, 249, 250);
+}
+
+.fd-tabs-scroller {
+  position: relative;
+  display: block;
+  flex: 1 1 auto;
+}
+
+.fd-tabs-row {
+  display: flex;
+}
+
+.fd-tab {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  cursor: pointer;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.45712px;
+  text-align: center;
+}
+
+.fd-tab-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  color: rgb(203, 12, 159);
+}
+
+.fd-tab-indicator {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(221, 221, 221) 0 1px 5px 1px;
+  transition: all 500ms ease 0s;
+}
+
+.fd-columns {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 24px);
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+.fd-col {
+  flex-basis: 100%;
+  flex-grow: 0;
+  min-width: 0;
+  max-width: 100%;
+  padding-top: 24px;
+  padding-left: 24px;
+}
+
+@media (min-width: 768px) {
+  .fd-col-left {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .fd-col-right {
+    flex-basis: 66.6667%;
+
+    max-width: 66.6667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .fd-col-left {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+
+  .fd-col-right {
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+}
+
+.fd-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+  background-clip: border-box;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 20px 27px 0;
+}
+
+.fd-card-second {
+  margin-top: 8px;
+}
+
+.fd-card-pad {
+  padding: 24px;
+}
+
+.fd-form {
+  padding: 24px;
+}
+
+.fd-box-16 {
+  margin-bottom: 16px;
+}
+
+.fd-box-8 {
+  margin-bottom: 8px;
+}
+
+.fd-input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid rgb(210, 214, 218);
+  border-radius: 8px;
+  background-color: #fff;
+  color: rgb(73, 80, 87);
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0.13132px;
+}
+
+.fd-input:focus-within {
+  border-color: rgb(53, 209, 245);
+  box-shadow: 0 0 0 2px rgba(53, 209, 245, 0.3);
+}
+
+.fd-input input {
+  display: block;
+  box-sizing: content-box;
+  width: 100%;
+  min-width: 0;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: currentcolor;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.fd-input input::placeholder {
+  color: rgb(103, 116, 142);
+  opacity: 1;
+}
+
+.fd-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  border: 1px solid rgb(210, 214, 218);
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.fd-select:focus-within,
+.fd-select-open {
+  border-color: rgb(53, 209, 245);
+  box-shadow: 0 0 0 2px rgba(53, 209, 245, 0.3);
+}
+
+.fd-select-single,
+.fd-select-placeholder {
+  flex: 1 1 auto;
+  padding: 2px 8px 2px 12px;
+  font-size: 14px;
+  line-height: 19.6px;
+}
+
+.fd-select-placeholder {
+  color: rgb(103, 116, 142);
+}
+
+.fd-select-single {
+  color: rgb(52, 71, 103);
+}
+
+.fd-select-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 44px 0 12px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+}
+
+.fd-select-arrow {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  padding: 12px;
+  color: rgb(52, 71, 103);
+  pointer-events: none;
+}
+
+.fd-select-arrow svg {
+  fill: currentcolor;
+  transition: transform 150ms ease;
+}
+
+.fd-select-open .fd-select-arrow svg {
+  transform: rotate(180deg);
+}
+
+.fd-menu {
+  padding-top: 4px;
+}
+
+.fd-option {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: rgb(103, 116, 142);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.fd-menu .fd-option:first-child {
+  background-color: rgba(52, 71, 103, 0.12);
+}
+
+.fd-menu:hover .fd-option:first-child {
+  background-color: transparent;
+}
+
+.fd-menu .fd-option:hover {
+  background-color: rgba(52, 71, 103, 0.12);
+}
+
+.fd-label {
+  color: rgb(52, 71, 103);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01071em;
+}
+
+.fd-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.fd-check-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fd-check-box {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 6px 0 0;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 5.6px;
+  background-color: transparent;
+  transition: all 250ms ease 0s;
+}
+
+.fd-check-on {
+  border-color: rgb(203, 12, 159);
+  background-color: rgb(203, 12, 159);
+}
+
+.fd-check-text {
+  color: rgb(52, 71, 103);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.625;
+}
+
+.fd-divider {
+  height: 1px;
+  margin: 16px 0;
+  border: 0;
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
+  opacity: 0.25;
+}
+
+.fd-sort-row {
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.fd-sort-label {
+  margin: 0 8px 0 0;
+  color: rgb(52, 71, 103);
+  font-size: 20px;
+  line-height: 1.625;
+}
+
+.fd-sort-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  min-height: 40px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background-color: rgb(203, 12, 159);
+  box-shadow: rgba(0, 0, 0, 0.11) 0 4px 7px -1px, rgba(0, 0, 0, 0.07) 0 2px 4px -1px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16.8px;
+  letter-spacing: 0.34284px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 150ms ease-in 0s;
+}
+
+
+.fd-sort-btn:focus:not(:hover) {
+  box-shadow: 0 0 0 3.2px rgba(203, 12, 159, 0.5);
+  outline: 0;
+}
+
+.fd-map {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  border:0;
+  border-radius: 16px;
+}
+
+.fd-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.fd-map-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fd-map-seg {
+  display: flex;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px -1px;
+}
+
+.fd-map-seg-btn {
+  height: 40px;
+  padding: 0 17px;
+  border: 0;
+  background: transparent;
+  color: rgb(86, 86, 86);
+  cursor: pointer;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.fd-map-seg-on {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.fd-map-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px -1px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.fd-list-count {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.fd-list-item {
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: rgb(248, 249, 250);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fd-list-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.fd-list-strong {
+  font-weight: 700;
+}
+
+
+/* ===== Doctor card ===== */
+
+.fd-doc-card :where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .fd-doc-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 24px;
+    padding: 24px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1.25rem 1.6875rem 0;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.625;
+    letter-spacing: 0.00938em;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .fd-doc-card a,
+  .fd-doc-card a:link,
+  .fd-doc-card a:visited {
+    text-decoration: none !important;
+  }
+  
+  .fd-doc-row {
+    display: flex;
+  }
+  
+  .fd-doc-photo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgb(131, 146, 171);
+  }
+  
+  .fd-doc-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .fd-doc-info {
+    min-width: 0;
+    margin-left: 16px;
+  }
+  
+  .fd-doc-name {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625;
+    letter-spacing: 0.0075em;
+    color: rgb(52, 71, 103);
+  }
+  
+  .fd-doc-line {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.01071em;
+    color: rgb(103, 116, 142);
+  }
+  
+  .fd-doc-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    min-height: 2.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    outline: 0;
+    background-color: rgb(203, 12, 159);
+    color: rgb(255, 255, 255);
+    box-shadow:
+      rgba(0, 0, 0, 0.11) 0 0.25rem 0.4375rem -0.0625rem,
+      rgba(0, 0, 0, 0.07) 0 0.125rem 0.25rem -0.0625rem;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02857em;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    transition: all 150ms ease-in 0s;
+  }
+  @media (max-width: 767px) {
+    .fd-map {
+      height: 420px;
+    }
+  
+    .fd-map-seg-btn {
+      padding: 0 12px;
+      font-size: 16px;
+    }
+  
+    .fd-map-check {
+      font-size: 16px;
+    }
+  
+    .fd-doc-card {
+      padding: 16px;
+    }
+  
+    .fd-doc-row {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  
+    .fd-doc-info {
+      margin-left: 0;
+    }
+  }
+  .fd-root:has(.ap-page) > div:first-child {
+    display: none;
+  }
+  /* ===== اصلاحات صفحهٔ نتایج (مطابق سایت اصلی) ===== */
+
+/* Sort By: hover رنگ را عوض نمی‌کند؛ فقط بعد از کلیک و خروج ماوس تیره می‌شود */
+.fd-sort-btn:hover {
+  background-color: rgb(203, 12, 159);
+}
+
+.fd-sort-btn:focus:not(:hover) {
+  background-color: rgb(138, 10, 108);
+  box-shadow: 0 0 0 3.2px rgba(203, 12, 159, 0.5);
+  outline: 0;
+}
+
+/* چک‌باکس فیلترها: سرمه‌ای */
+.fd-check-on {
+  border-color: rgb(52, 71, 103);
+  background-color: rgb(52, 71, 103);
+}
+
+/* فلش select */
+.fd-select-arrow svg {
+  width: 14px;
+  height: 14px;
+  fill: rgb(103, 116, 142);
+  stroke: rgb(103, 116, 142);
+  stroke-width: 1px;
+}
+
+/* placeholder مثل رنگ متن input */
+.fd-input input::placeholder {
+  color: rgb(73, 80, 87);
+  opacity: 1;
+}
+
+/* نوشتهٔ Press to select روی گزینه‌ها */
+.fd-option {
+  position: relative;
+}
+
+.fd-option::after {
+  content: "Press to select";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fd-menu .fd-option:first-child::after {
+  opacity: 0.5;
+}
+
+.fd-menu:hover .fd-option:first-child::after {
+  opacity: 0;
+}
+
+.fd-menu:hover .fd-option:hover::after {
+  opacity: 0.5;
+}
+/* ===== فیلترها و Sort By: نسخهٔ نهایی ===== */
+.fd-root .fd-label {
+  margin-bottom: 8px;
+}
+.fd-check {
+  margin-bottom: 8px;
+}
+.fd-input input::placeholder {
+  color: rgb(103, 116, 142);
+  opacity: 1;
+}
+.fd-select-wrap {
+  position: relative;
+}
+.fd-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 10px 31px -15px rgba(20, 20, 20, 0.35), 0 4px 6px -1px rgba(20, 20, 20, 0.12);
+}
+.fd-option {
+  position: relative;
+}
+.fd-option::after {
+  content: "Press to select";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+.fd-menu .fd-option:first-child::after {
+  opacity: 0;
+}
+.fd-menu:hover .fd-option:hover::after {
+  opacity: 0.5;
+}
+.fd-sort-row .fd-sort-btn,
+.fd-sort-row:hover .fd-sort-btn {
+  background-color: rgb(203, 12, 159);
+  box-shadow: rgba(0, 0, 0, 0.11) 0 4px 7px -1px, rgba(0, 0, 0, 0.07) 0 2px 4px -1px;
+  transition: all 150ms ease-in;
+}
+.fd-sort-row .fd-sort-btn:hover {
+  background-color: rgb(203, 12, 159);
+  transform: scale(1.02);
+}
+.fd-sort-row .fd-sort-btn.fd-sort-active:not(:hover) {
+   background-color: rgb(203, 12, 159); 
+  
+    
+   box-shadow: 0 0 0 2px rgba(203, 12, 159, 0.3);
+      }
+
+      .fd-sort-row .fd-sort-btn:focus:not(:hover):not(.fd-sort-active) {
+        background-color: rgb(203, 12, 159);
+        /* فقط یک سایه خیلی ملایم تا وقتی کلیک شد، از بقیه کمی متمایز بشه */
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.15); 
+      }
+.fd-sort-row .fd-sort-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.fd-input input {
+  color: rgb(52, 71, 103);
+}
+/* ===== Sort By: با رنگ تیره‌تر هنگام کلیک ===== */ .fd-sort-row .fd-sort-btn { background-color: rgb(203, 12, 159); /*رنگ صورتی پایه (روشن) */ border: none; outline: none; box-shadow: rgba(0, 0, 0, 0.11) 0 4px 7px -1px, rgba(0, 0, 0, 0.07) 0 2px 4px -1px; transition: all 150ms ease-in; }
+/* وقتی موس روشه */ .fd-sort-row .fd-sort-btn:hover { transform: scale(1.02); }
+/* وقتی کلیک میشه (Focus و Active) */ .fd-sort-row .fd-sort-btn:focus, .fd-sort-row .fd-sort-btn:active, .fd-sort-row .fd-sort-btn.fd-sort-active { /* 👇 اینجا رنگ رو تیره‌تر کردم */ background-color: rgb(179, 29, 144) !important; outline: none; /* همون هاله ملایم دور دکمه */ box-shadow: 0 0 0 3px rgba(203, 12, 159, 0.3) !important; }
+/* ===== خط فیروزه‌ای دقیقا مثل فیلترها برای باکس‌های هدر ===== */
+ /* ===== افکت بزرگ شدن دکمه‌های کارت دکتر هنگام هاور ===== */
+.fd-doc-btn {
+  transition: all 150ms ease-in-out !important;
+}
+
+.fd-doc-btn:hover {
+  transform: scale(1.02) !important;
+}
+
+
+
+
+
+/* ===== Sort By: نسخهٔ نهایی ===== */
+.fd-sort-row .fd-sort-btn,
+.fd-sort-row .fd-sort-btn.fd-sort-active,
+.fd-sort-row .fd-sort-btn:active {
+  background-color: rgb(203, 12, 159) !important;
+  box-shadow: rgba(0, 0, 0, 0.11) 0 4px 7px -1px, rgba(0, 0, 0, 0.07) 0 2px 4px -1px !important;
+  outline: none !important;
+  transition: all 150ms ease-in !important;
+}
+
+.fd-sort-row .fd-sort-btn:hover {
+  transform: scale(1.05) !important;
+}
+
+.fd-sort-row .fd-sort-btn:focus:not(:hover) {
+  background-color: rgb(138, 10, 108) !important;
+  box-shadow: 0 0 0 3.2px rgba(203, 12, 159, 0.5) !important;
+}
+
+.fd-hero-box:focus-within {
+  border-color: rgb(53, 209, 245) !important;
+  box-shadow: 0 0 0 2px rgba(53, 209, 245, 0.3) !important;
+  outline: none !important;
+}
+
+.fd-hero-box input,
+.fd-hero-box input:focus,
+.fd-hero-box input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* وقتی PageHeader داخل بنر است، هدر مشترک گروه پنهان باشد */
+body.fd-hide-layout-header header.sticky {
+  display: none !important;
+}
+@media (max-width: 1199px) {
+  body.fd-hide-layout-header aside {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    height: 100%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+  }
+  body.fd-hide-layout-header:not(.fd-nav-open) aside {
+    transform: translateX(-110%);
+  }
+}
+body.fd-hide-layout-header main { min-width: 0; }
+.fd-chat-spin { animation: fdChatSpin 0.3s ease-out both; }
+
+@keyframes fdChatIn {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes fdChatOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.6); }
+}
+@keyframes fdChatSpin {
+  from { opacity: 0; transform: rotate(-90deg) scale(0.4); }
+  to   { opacity: 1; transform: rotate(0) scale(1); }
+}
